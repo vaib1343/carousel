@@ -1,0 +1,19 @@
+.hero_container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: linear-gradient(45deg, #03DF63 0.7%, #458FF6 80%)
+}
+.hero_container > h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.hero_container > p {
+    font-size: 25px;
+    font-weight: 800;
+}

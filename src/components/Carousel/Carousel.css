@@ -1,0 +1,46 @@
+.carousel_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bg_image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../../assets/vector2.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    z-index: 50;
+    border-radius: 15px;
+}
+
+.btn_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+    width: 70%;
+}
+
+.carousel_btn {
+    color: rgb(255, 255, 255);
+    z-index: 999;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}

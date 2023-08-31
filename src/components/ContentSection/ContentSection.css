@@ -1,0 +1,23 @@
+.content_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 140px 50px;
+    box-sizing: border-box;
+}
+
+.content_clm {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.content_heading, .content_paragraph {
+    text-align: center;
+}
+
+.content_paragraph {
+    font-size: 14px;
+    color: #787878;
+}
