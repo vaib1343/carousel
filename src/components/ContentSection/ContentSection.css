@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+.carousel_left {
+    flex-direction: row-reverse;
+    background-color: #f1f1f1;
+}
+
 .content_clm {
     display: flex;
     flex-direction: column;

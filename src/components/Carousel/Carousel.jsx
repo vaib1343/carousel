@@ -1,25 +1,13 @@
 import "./Carousel.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTransition, animated } from "react-spring";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 
-function Carousel({ slides }) {
+function Carousel({ slides, transitionStyles }) {
+    console.log("tr", transitionStyles)
     const [index, setIndex] = useState(0);
 
-    const transition = useTransition(index, {
-        from: {
-            opacity: 0,
-            transform: "translateX(70px)",
-        },
-        enter: {
-            opacity: 1,
-            transform: "translateX(0)",
-        },
-        leave: {
-            opacity: 0,
-            transform: "translateX(-70px)",
-        },
-    });
+    const transition = useTransition(index, transitionStyles);
 
     const onNext = () => {
         setIndex((preState) => {
@@ -40,6 +28,16 @@ function Carousel({ slides }) {
             }
         });
     };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            onNext();
+        }, 3000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     return (
         <div className="carousel_container">

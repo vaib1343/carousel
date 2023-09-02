@@ -16,6 +16,63 @@ import ImageFive from "../assets/img5.jpg";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
+const transitionOne = {
+    from: {
+        opacity: 0,
+    },
+    enter: {
+        opacity: 1,
+    },
+    leave: {
+        opacity: 0,
+    },
+};
+
+const transitionTwo = {
+    from: {
+        opacity: 0,
+        transform: "scale(0)",
+    },
+    enter: {
+        opacity: 1,
+        transform: "scale(1)",
+    },
+    leave: {
+        opacity: 0,
+        transform: "scale(0)",
+    },
+};
+
+const transitionThree = {
+    from: {
+        opacity: 0,
+        transform: "perspective(600px) rotateX(180deg)",
+    },
+    enter: {
+        opacity: 1,
+        transform: "perspective(600px) rotateX(0deg)",
+    },
+    leave: {
+        opacity: 0,
+        transform: "perspective(600px) rotateX(-180deg)",
+    },
+};
+
+const transitionFour = {
+    from: {
+        opacity: 0,
+        transform: "rotate(180deg)",
+    },
+    enter: {
+        opacity: 1,
+        transform: "rotate(0deg)",
+    },
+    leave: {
+        opacity: 0,
+        transform: "rotate(-180deg)",
+    },
+};
+
 function App() {
     return (
         <div>
@@ -25,7 +82,19 @@ function App() {
             {/* <FunFour/> */}
             {/* <CarouselBasic/> */}
             <Hero />
-            <ContentSection />
+            <ContentSection
+                carouselPosition="right"
+                transitionStyles={transitionOne}
+            />
+            <ContentSection
+                carouselPosition="left"
+                transitionStyles={transitionTwo}
+            />
+            <ContentSection
+                carouselPosition="right"
+                transitionStyles={transitionThree}
+            />
+            <ContentSection carouselPosition="left" transitionStyles={transitionFour}/>
             <Footer />
         </div>
     );

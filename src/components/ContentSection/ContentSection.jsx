@@ -9,9 +9,13 @@ import Carousel from "../Carousel/Carousel";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
-function ContentSection() {
+function ContentSection({ carouselPosition, transitionStyles }) {
     return (
-        <div className="content_container">
+        <div
+            className={`content_container ${
+                carouselPosition === "left" && "carousel_left"
+            }`}
+        >
             <div className="content-left content_clm">
                 <h1 className="content_heading">This is the content heading</h1>
                 <p className="content_paragraph">
@@ -34,7 +38,7 @@ function ContentSection() {
                 </p>
             </div>
             <div className="content-right content_clm">
-                <Carousel slides={SLIDES} />
+                <Carousel slides={SLIDES} transitionStyles={transitionStyles} />
             </div>
         </div>
     );
