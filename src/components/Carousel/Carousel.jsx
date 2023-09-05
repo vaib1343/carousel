@@ -4,7 +4,6 @@ import { useTransition, animated } from "react-spring";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 
 function Carousel({ slides, transitionStyles }) {
-    console.log("tr", transitionStyles)
     const [index, setIndex] = useState(0);
 
     const transition = useTransition(index, transitionStyles);

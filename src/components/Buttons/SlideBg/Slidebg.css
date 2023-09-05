@@ -1,0 +1,33 @@
+.slideBg {
+    text-decoration: none;
+    font-size: 45px;
+    font-family: sans-serif;
+    color: black;
+    border: 5px solid black;
+    padding: 40px 80px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s ease-in-out 1s, border 1s ease-in-out 2s;
+}
+
+.slideBg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(121, 23, 23);
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: transform 1s;
+}
+
+.slideBg:hover::after {
+    transform: translateX(0px);
+}
+
+.slideBg:hover {
+    color: wheat;
+    border: 5px solid wheat;
+}

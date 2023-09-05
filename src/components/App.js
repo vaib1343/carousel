@@ -13,6 +13,10 @@ import ImageTwo from "../assets/img2.jpg";
 import ImageThree from "../assets/img3.jpg";
 import ImageFour from "../assets/img4.jpg";
 import ImageFive from "../assets/img5.jpg";
+import ScrollAnimation from "./ScrollAnimation/ScrollAnimation";
+import Battery from "./Battery/Battery";
+import RotateBg from "./Buttons/RotateBg/RotateBg";
+import SlideBg from "./Buttons/SlideBg/SlideBg";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
@@ -82,6 +86,20 @@ function App() {
             {/* <FunFour/> */}
             {/* <CarouselBasic/> */}
             <Hero />
+            <div
+                style={{
+                    height: "100vh",
+                    width: "100vw",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}
+            >
+                {/* <RotateBg /> */}
+                <SlideBg/>
+            </div>
+            {/* <ScrollAnimation/> */}
+            <Battery />
             <ContentSection
                 carouselPosition="right"
                 transitionStyles={transitionOne}
@@ -94,7 +112,10 @@ function App() {
                 carouselPosition="right"
                 transitionStyles={transitionThree}
             />
-            <ContentSection carouselPosition="left" transitionStyles={transitionFour}/>
+            <ContentSection
+                carouselPosition="left"
+                transitionStyles={transitionFour}
+            />
             <Footer />
         </div>
     );
