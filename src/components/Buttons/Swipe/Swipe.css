@@ -1,0 +1,51 @@
+.swipe {
+    padding: 20px 40px;
+    color: rgb(105, 105, 26);
+    border: 2px solid rgb(105, 105, 26);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+    position: relative;
+}
+
+.swipe::before {
+    content: "Hover Me";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(105, 105, 26);
+    background-color: black;
+    transition: all .5s;
+}
+.swipe::after {
+    content: "Hover Me";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(105, 105, 26);
+    background-color: black;
+    transform: translateX(-100%) scale(0) rotateY(360deg);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.swipe:hover::after {
+    transform: translateX(0) scale(1) rotateY(0);
+    opacity: 1;
+}
+
+.swipe:hover::before {
+    transform: translateX(100%) scale(0) rotateY(360deg);
+    opacity: 0;
+}

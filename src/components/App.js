@@ -17,6 +17,15 @@ import ScrollAnimation from "./ScrollAnimation/ScrollAnimation";
 import Battery from "./Battery/Battery";
 import RotateBg from "./Buttons/RotateBg/RotateBg";
 import SlideBg from "./Buttons/SlideBg/SlideBg";
+import FourSide from "./Buttons/FourSide/FourSide";
+import ScaleWidth from "./Buttons/ScaleWidth/ScaleWidth";
+import SlideTop from "./Buttons/SlideTop/SlideTop";
+import Glow from "./Buttons/Glow/Glow";
+import TwoLayer from "./Buttons/TwoLayer/TwoLayer";
+import ScaleText from "./Buttons/ScaleText/ScaleText";
+import Bubble from "./Buttons/Bubble/Bubble";
+import Flip from "./Buttons/Flip/Flip";
+import Swipe from "./Buttons/Swipe/Swipe";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
@@ -96,7 +105,16 @@ function App() {
                 }}
             >
                 {/* <RotateBg /> */}
-                <SlideBg/>
+                {/* <SlideBg/> */}
+                {/* <FourSide/> */}
+                {/* <ScaleWidth/> */}
+                {/* <SlideTop/> */}
+                {/* <Glow/> */}
+                {/* <TwoLayer/> */}
+                {/* <ScaleText/> */}
+                {/* <Bubble/> */}
+                {/* <Flip/> */}
+                <Swipe/>
             </div>
             {/* <ScrollAnimation/> */}
             <Battery />

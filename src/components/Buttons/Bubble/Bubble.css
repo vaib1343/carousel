@@ -1,0 +1,32 @@
+.bubble {
+    border: 2px solid tomato;
+    padding: 40px 80px;
+    text-decoration: none;
+    color: tomato;
+    font-size: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.bubble::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: tomato;
+    z-index: -1;
+    border-radius: 0 0 50% 50%;
+    transition: all .5s;
+}
+
+.bubble:hover::after {
+    border-radius: 0px;
+    height: 100%;
+}
+
+.bubble:hover {
+    color: white;
+}

@@ -1,0 +1,17 @@
+.scaleWidth {
+    padding: 40px 80px;
+    font-size: 45px;
+    border: 3px solid red;
+    color: red;
+    text-decoration: none;
+    font-weight: 300;
+    transition: all 1s;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.scaleWidth:hover {
+    border: 7px solid red;
+    font-weight: 900;
+    transform: scale(1.1);
+}
