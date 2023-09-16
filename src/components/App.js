@@ -26,6 +26,9 @@ import ScaleText from "./Buttons/ScaleText/ScaleText";
 import Bubble from "./Buttons/Bubble/Bubble";
 import Flip from "./Buttons/Flip/Flip";
 import Swipe from "./Buttons/Swipe/Swipe";
+import Dots from "./Buttons/Dots/Dots";
+import OpenSide from "./Buttons/OpenSide/OpenSide";
+import FourCorner from "./Buttons/FourCorner/FourCorner";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
@@ -114,7 +117,10 @@ function App() {
                 {/* <ScaleText/> */}
                 {/* <Bubble/> */}
                 {/* <Flip/> */}
-                <Swipe/>
+                {/* <Swipe/> */}
+                {/* <Dots/> */}
+                {/* <OpenSide/> */}
+                <FourCorner/>
             </div>
             {/* <ScrollAnimation/> */}
             <Battery />
