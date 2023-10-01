@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+.diamond {
+    text-decoration: none;
+    position: relative;
+    width: 250px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: purple;
+    border: 4px solid purple;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.diamond::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-top: 40px solid purple;
+    border-bottom: 40px solid purple;
+    border-right: 40px solid transparent;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.diamond::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-top: 40px solid purple;
+    border-bottom: 40px solid purple;
+    border-left: 40px solid transparent;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 0.5s;
+}
+
+.diamond:hover {
+    color: white;
+}
+
+.diamond:hover::after {
+    transform: translateX(0px);
+}
+
+.diamond:hover::before {
+    transform: translateX(0px);
+}

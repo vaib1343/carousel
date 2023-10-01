@@ -1,0 +1,50 @@
+.bgSwipeContainer {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bgSwipeContainer::before {
+    content: "";
+    background-color: rgba(0, 0, 20, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: all 0.2s;
+}
+
+.bgSwipeContainer img {
+    width: 100%;
+}
+
+.bgSwipeContainer:hover::before {
+    transform: translateY(0);
+}
+
+.bgSwipeContainer .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition-delay: .2s;
+    transition-duration: .5s;
+    transition-property: all;
+    transform: translateY(20%);
+}
+
+.bgSwipeContainer:hover .caption {
+    opacity: 1;
+    transform: translateY(0);
+
+}

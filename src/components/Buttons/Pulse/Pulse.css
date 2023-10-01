@@ -1,0 +1,40 @@
+.pulse {
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 25px 50px;
+    border-radius: 100px;
+    color: #777;
+    font-size: 27px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.pulse::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    border-radius: 100px;
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.pulse:hover::before {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.pulse:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pulse:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

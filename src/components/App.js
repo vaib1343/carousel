@@ -29,6 +29,21 @@ import Swipe from "./Buttons/Swipe/Swipe";
 import Dots from "./Buttons/Dots/Dots";
 import OpenSide from "./Buttons/OpenSide/OpenSide";
 import FourCorner from "./Buttons/FourCorner/FourCorner";
+import BorderMove from "./Buttons/BorderMove/BorderMove";
+import CornerBorderMove from "./Buttons/CornerBorderMove/CornerBorderMove";
+import FirstLetter from "./Buttons/FirstLetter/FirstLetter";
+import FourSideBorder from "./Buttons/FourSideBorder/FourSideBorder";
+import Wave from "./Buttons/Wave/Wave";
+import BorderCut from "./Buttons/BorderCut/BorderCut";
+import BgShift from "./Buttons/BgShift/BgShift";
+import Pulse from "./Buttons/Pulse/Pulse";
+import Diamond from "./Buttons/Diamond/Diamond";
+import GlowBtn from "./Buttons/GlowBtn/GlowBtn";
+import ScaleTil from "./ImageEle/ScaleTil/ScaleTil";
+import SwipeRight from './ImageEle/SwipeRight/SwipeRight';
+import ImageReplace from "./ImageEle/ImageReplace/ImageReplace";
+import BgSwipe from "./ImageEle/BgSwipe/BgSwipe";
+import MultiEle from "./ImageEle/MultiEle/MultiEle";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
@@ -107,6 +122,7 @@ function App() {
                     alignItems: "center",
                 }}
             >
+                {/* button */}
                 {/* <RotateBg /> */}
                 {/* <SlideBg/> */}
                 {/* <FourSide/> */}
@@ -120,7 +136,24 @@ function App() {
                 {/* <Swipe/> */}
                 {/* <Dots/> */}
                 {/* <OpenSide/> */}
-                <FourCorner/>
+                {/* <FourCorner/> */}
+                {/* <BorderMove /> */}
+                {/* <CornerBorderMove /> */}
+                {/* <FirstLetter/> */}
+                {/* <FourSideBorder/> */}
+                {/* <Wave/> */}
+                {/* <BorderCut/> */}
+                {/* <BgShift/> */}
+                {/* <Pulse/> */}
+                {/* <Diamond /> */}
+                {/* <GlowBtn/> */}
+
+                {/* Image? */}
+                {/* <ScaleTil /> */}
+                {/* <SwipeRight/> */}
+                {/* <ImageReplace/> */}
+                {/* <BgSwipe/> */}
+                <MultiEle/>
             </div>
             {/* <ScrollAnimation/> */}
             <Battery />

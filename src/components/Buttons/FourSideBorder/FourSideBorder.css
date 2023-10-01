@@ -1,0 +1,68 @@
+.fourSideBorder {
+    padding: 20px 80px;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.fourSideBorder::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0px;
+    width: 0;
+    border-bottom: 2px solid black;
+    transition: all .5s;
+}
+
+.fourSideBorder::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0px;
+    width: 0;
+    border-top: 2px solid black;
+    transition: all .5s;
+}
+
+.fourSideBorder:hover::before {
+    width: 100%;
+}
+
+.fourSideBorder:hover::after {
+    width: 100%;
+}
+
+.fourSideBorder span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 2px solid black;
+    transition: all .5s;
+}
+
+.fourSideBorder:hover span::after {
+    height: 100%;
+}
+
+.fourSideBorder span::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 2px solid black;
+    transition: all .5s;
+}
+
+.fourSideBorder:hover span::before {
+    height: 100%;
+}

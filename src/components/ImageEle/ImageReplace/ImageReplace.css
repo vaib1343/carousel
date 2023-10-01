@@ -1,0 +1,47 @@
+.imageReplaceContainer {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imageReplaceContainer img {
+    width: 100%;
+    transition: all .5s;
+
+}
+
+.imageReplaceContainer .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white ;
+    transition: all .5s;
+    transform: translateX(-100%);
+
+}
+
+.imageReplaceContainer .caption h1 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.imageReplaceContainer .caption p {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.imageReplaceContainer:hover img {
+    transform: translateX(100%);
+}
+
+.imageReplaceContainer:hover .caption {
+    transform: translateX(0);
+}

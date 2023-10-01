@@ -1,0 +1,82 @@
+.multiEleContainer {
+    height: 300px;
+    width: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.multiEleContainer img {
+    height: 100%;
+    width: 100%;
+}
+
+.multiEleContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 205%;
+    width: 120%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translate(550px, 300px) rotate(45deg);
+    transition: all 0.5s;
+}
+
+.multiEleContainer:hover::before {
+    transform: translate(-60px, -150px) rotate(45deg);
+}
+
+.multiEleContainer .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    text-transform: uppercase;
+}
+
+.multiEleContainer .caption h1 {
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    transform: translate(100%, -100%);
+    transition: all 0.2s 0.5s ease-in-out;
+}
+
+.multiEleContainer:hover .caption h1 {
+    transform: translate(0, 0);
+}
+
+.multiEleContainer .caption p {
+    font-size: 15px;
+    width: 80%;
+    align-self: center;
+    text-align: center;
+    transition: all 0.2s 0.5s ease-in-out;
+    transform: translate(-200px, 200px);
+}
+
+.multiEleContainer:hover .caption p {
+    transform: translate(0, 0);
+}
+
+.multiEleContainer .caption a {
+    text-decoration: none;
+    background-color: black;
+    padding: 20px 30px;
+    color: white;
+    text-align: center;
+    width: 150px;
+    align-self: center;
+    font-size: 14px;
+    transform: translateY(100px);
+    transition: all 0.2s 0.5s ease-in-out;
+}
+
+.multiEleContainer:hover .caption a {
+    transform: translateY(0px);
+}

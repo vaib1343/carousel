@@ -1,0 +1,46 @@
+.scaleTilContainer {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scaleTilContainer img {
+    width: 100%;
+    transition: all .5s;
+
+}
+
+.scaleTilContainer .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white ;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.scaleTilContainer .caption h1 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.scaleTilContainer .caption p {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.scaleTilContainer:hover img {
+    transform: rotate(15deg) scale(1.2);
+}
+
+.scaleTilContainer:hover .caption {
+    opacity: 1;
+}
