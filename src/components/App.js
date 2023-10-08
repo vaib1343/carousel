@@ -40,10 +40,18 @@ import Pulse from "./Buttons/Pulse/Pulse";
 import Diamond from "./Buttons/Diamond/Diamond";
 import GlowBtn from "./Buttons/GlowBtn/GlowBtn";
 import ScaleTil from "./ImageEle/ScaleTil/ScaleTil";
-import SwipeRight from './ImageEle/SwipeRight/SwipeRight';
+import SwipeRight from "./ImageEle/SwipeRight/SwipeRight";
 import ImageReplace from "./ImageEle/ImageReplace/ImageReplace";
 import BgSwipe from "./ImageEle/BgSwipe/BgSwipe";
 import MultiEle from "./ImageEle/MultiEle/MultiEle";
+import RotateEntry from "./ImageEle/RotateEntry/RotateEntry";
+import ScaleBg from "./ImageEle/ScaleBg/ScaleBg";
+import TBMenu from "./Menu/TBMenu/TBMenu";
+import LRBorderMenu from "./Menu/LRBorderMenu/LRBorderMenu";
+import FourPartMenu from "./Menu/FourPartMenu/FourPartMenu";
+import BBorderMenu from "./Menu/BBorderMenu/BBorderMenu";
+import BlurMenu from "./Menu/BlurMenu/BlurMenu";
+import SecondText from "./Menu/SecondText/SecondText";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
@@ -153,7 +161,17 @@ function App() {
                 {/* <SwipeRight/> */}
                 {/* <ImageReplace/> */}
                 {/* <BgSwipe/> */}
-                <MultiEle/>
+                {/* <MultiEle/> */}
+                {/* <RotateEntry/> */}
+                {/* <ScaleBg/> */}
+
+                {/* menu */}
+                {/* <TBMenu/> */}
+                {/* <LRBorderMenu/> */}
+                {/* <FourPartMenu/> */}
+                {/* <BBorderMenu/> */}
+                {/* <BlurMenu/> */}
+                <SecondText />
             </div>
             {/* <ScrollAnimation/> */}
             <Battery />

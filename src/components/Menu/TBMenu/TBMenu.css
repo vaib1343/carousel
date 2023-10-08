@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tbMenuContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tbMenuContainer li {
+    list-style: none;
+}
+
+.tbMenuContainer li a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    padding: 10px 15px;
+    position: relative;
+    display: block;
+}
+
+.tbMenuContainer li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s;
+}
+
+.tbMenuContainer li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.5s;
+}
+
+
+.tbMenuContainer li a:hover::before {
+    transform: scaleX(1);
+}
+
+.tbMenuContainer li a:hover::after {
+    transform: scaleX(1);
+}

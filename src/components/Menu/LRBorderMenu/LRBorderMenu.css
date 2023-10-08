@@ -1,0 +1,78 @@
+.LRBorderMenuContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.LRBorderMenuContainer li {
+    list-style: none;
+}
+
+.LRBorderMenuContainer li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all .4s;
+    margin-inline: 10px;
+}
+
+.LRBorderMenuContainer li a:hover {
+    color: white;
+}
+
+.LRBorderMenuContainer li a span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: palevioletred;
+    transition: all .4s;
+    z-index: -1;
+    transform: scale(0.5);
+}
+
+.LRBorderMenuContainer li a:hover span {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.LRBorderMenuContainer li a::before {
+    content: "";
+    position: absolute;
+    left: -3.5px;
+    top: -3.5px;
+    height: 9px;
+    width: 9px;
+    border-top: 2px solid palevioletred;
+    border-left: 2px solid palevioletred;
+    transform: scale(0);
+    transform-origin: right bottom;
+    transition: all .4s;
+}
+
+.LRBorderMenuContainer li a:hover::before {
+    transform: scale(1);
+}
+
+.LRBorderMenuContainer li a::after {
+    content: "";
+    position: absolute;
+    bottom: -3.5px;
+    right: -3.5px;
+    height: 9px;
+    width: 9px;
+    border-right: 2px solid palevioletred;
+    border-bottom: 2px solid palevioletred;
+    transform: scale(0);
+    transform-origin: left top;
+    transition: all .4s;
+}
+
+.LRBorderMenuContainer li a:hover::after {
+    transform: scale(1);
+}

@@ -1,0 +1,86 @@
+.rotateEntryContainer {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rotateEntryContainer::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translate(calc(100% + 200px), -50%) rotate(360deg) scale(0.5);
+    transition: all 0.4s;
+}
+
+.rotateEntryContainer img {
+    height: 100%;
+    width: 100%;
+}
+
+.rotateEntryContainer .caption {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rotateEntryContainer .caption h1 {
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    transform: translate(calc(100% + 200px), -50%) rotate(360deg) scale(0.5);
+    transition: all 0.2s 0.3s ease-in-out;
+}
+
+.rotateEntryContainer .caption p {
+    color: white;
+    text-align: center;
+    padding: 60px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transform: translate(calc(100% + 200px), -50%) rotate(360deg) scale(0.5);
+    transition: all 0.2s 0.4s ease-in-out;
+}
+
+.rotateEntryContainer .caption a {
+    padding: 20px 40px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(-400px) ;
+    transition: all 0.3s 0.5s ease-in-out;
+}
+
+.rotateEntryContainer:hover .caption a {
+    transform: translate(0);
+    opacity: 1;
+}
+
+
+.rotateEntryContainer:hover .caption p {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+}
+
+.rotateEntryContainer:hover .caption h1 {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+}
+
+.rotateEntryContainer:hover::before {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+}

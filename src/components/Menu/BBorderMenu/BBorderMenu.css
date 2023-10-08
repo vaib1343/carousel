@@ -1,0 +1,51 @@
+.bBorderMenuContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bBorderMenuContainer li {
+    list-style: none;
+}
+
+.bBorderMenuContainer li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.bBorderMenuContainer li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 50%;
+    background-color: pink;
+    border-radius: 3px;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: left;
+}
+
+.bBorderMenuContainer li a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 5px;
+    width: 50%;
+    background-color: rgb(131, 75, 131);
+    border-radius: 3px;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: right;
+}
+
+.bBorderMenuContainer li a:hover::after {
+    transform: scaleX(1) translateX(100%);
+}
+
+.bBorderMenuContainer li a:hover::before {
+    transform: scaleX(1) translateX(-100%);
+}
