@@ -1,0 +1,87 @@
+.fourBorderContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fourBorderContainer li {
+    list-style: none;
+    margin: 10px;
+}
+
+.fourBorderContainer li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+    position: relative;
+}
+
+.fourBorderContainer li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 10px;
+    border-left: 2px solid rgb(151, 46, 46);
+    border-top: 2px solid rgb(151, 46, 46);
+    transform: scale(0) translate(100%);
+    transition: all .3s;
+    transform-origin: right bottom;
+}
+
+.fourBorderContainer li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 10px;
+    width: 10px;
+    border-right: 2px solid rgb(151, 46, 46);
+    border-top: 2px solid rgb(151, 46, 46);
+    transform: scale(0) translate(100%);
+    transition: all .3s;
+}
+
+.fourBorderContainer li a span:nth-child(1) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 10px;
+    border-bottom: 2px solid rgb(151, 46, 46);
+    border-left: 2px solid rgb(151, 46, 46);
+    transform: scale(0) translate(100%);
+    transition: all .3s;
+    transform-origin: right top;
+}
+
+.fourBorderContainer li a span:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 10px;
+    width: 10px;
+    border-bottom: 2px solid rgb(151, 46, 46);
+    border-right: 2px solid rgb(151, 46, 46);
+    transform: scale(0) translate(100%);
+    transition: all .3s;
+    transform-origin: left top;
+}
+
+.fourBorderContainer li a:hover span {
+    transform: scale(1) translate(0);
+}
+
+
+.fourBorderContainer li a:hover span {
+    transform: scale(1) translate(0);
+}
+
+.fourBorderContainer li a:hover::after {
+    transform: scale(1) translate(0);
+}
+
+.fourBorderContainer li a:hover::before {
+    transform: scale(1) translate(0);
+}

@@ -1,0 +1,57 @@
+.rotateBorderMenuContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rotateBorderMenuContainer li {
+    list-style: none;
+    margin: 20px;
+}
+
+.rotateBorderMenuContainer li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.rotateBorderMenuContainer li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    transition: all 1s;
+    box-sizing: border-box;
+    transform-origin: left;
+}
+
+.rotateBorderMenuContainer li a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transition: all 1s;
+    box-sizing: border-box;
+    transform-origin: right;
+}
+
+.rotateBorderMenuContainer li a:hover::after {
+    height: 10px;
+    width: 10px;
+    transform: rotate(360deg);
+}
+
+.rotateBorderMenuContainer li a:hover::before {
+    height: 10px;
+    width: 10px;
+    transform: rotate(360deg);
+}

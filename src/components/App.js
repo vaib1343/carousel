@@ -52,6 +52,10 @@ import FourPartMenu from "./Menu/FourPartMenu/FourPartMenu";
 import BBorderMenu from "./Menu/BBorderMenu/BBorderMenu";
 import BlurMenu from "./Menu/BlurMenu/BlurMenu";
 import SecondText from "./Menu/SecondText/SecondText";
+import TwoBorderMenu from "./Menu/TwoBorderMenu/TwoBorderMenu";
+import FourBorder from "./Menu/FourBorder/FourBorder";
+import RotateBorderMenu from "./Menu/RotateBorderMenu/RotateBorderMenu";
+import Text3Dmenu from "./Menu/3DTextMenu/3DTextmenu";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
@@ -171,7 +175,11 @@ function App() {
                 {/* <FourPartMenu/> */}
                 {/* <BBorderMenu/> */}
                 {/* <BlurMenu/> */}
-                <SecondText />
+                {/* <SecondText /> */}
+                {/* <TwoBorderMenu/> */}
+                {/* <FourBorder/> */}
+                {/* <RotateBorderMenu/> */}
+                <Text3Dmenu/>
             </div>
             {/* <ScrollAnimation/> */}
             <Battery />

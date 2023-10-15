@@ -1,9 +1,9 @@
-import React from "react";
-import "./BlurMenu.css";
+import React from 'react'
+import './3DTextMenu.css';
 
-function BlurMenu() {
-    return (
-        <ul className="blurMenuContainer">
+function Text3Dmenu() {
+  return (
+    <ul className="text3dMenuContainer">
             <li>
                 <a href="#" data-text="Home">
                     Home
@@ -30,7 +30,7 @@ function BlurMenu() {
                 </a>
             </li>
         </ul>
-    );
+  )
 }
 
-export default BlurMenu;
+export default Text3Dmenu
