@@ -1,0 +1,163 @@
+/* my css */
+
+/* .productCardContainer {
+    height: 350px;
+    width: 290px;
+    position: relative;
+    background-color: #122936;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    font-size: 16px !important;
+}
+
+.productCardContainer::after {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    top: -30%;
+    left: 0;
+    background-color: #219bf3;
+    transform: skewY(-20deg);
+    transition: all .5s;
+}
+
+.productCardContainer:hover::after {
+    transform: skewY(40deg);
+    top: -40%;
+}
+
+.productCardContainer .content {
+    position: relative;
+    gap: 10px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center; 
+    z-index: 2;
+    transition: all .5s;
+}
+
+.productCardContainer .content img {
+    height: 200px;
+}
+
+.productCardContainer:hover .content {
+    transform: scale(0.8);
+    height: 70%;
+}
+
+.productCardContainer a {
+    text-decoration: none;
+    background-color: white;
+    margin: auto;
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: #122936;
+    font-size: 14px;
+    position: relative;
+} */
+
+
+/* tutorial css */
+
+
+.productCardContainer {
+    position: relative;
+    width: 320px;
+    height: 420px;
+    background-color: #122936;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.productCardContainer::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    height: 100%;
+    width: 100%;
+    background-color: #219bf3;
+    transform: skewY(-15deg);
+    transition: .5s;
+}
+
+.productCardContainer:hover::before {
+    top: -70%;
+    transform: skewY(30deg);
+}
+
+.productCardContainer .imgbox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.productCardContainer .imgbox img {
+    max-width: 100%;
+    transition: .5s;
+}
+
+.productCardContainer:hover .imgbox img {
+    max-width: 50%;
+}
+
+.productCardContainer .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.productCardContainer .contentBox h2 {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.productCardContainer .contentBox p {
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.productCardContainer .contentBox a {
+    position: relative;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: #219bf3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .5s;
+    opacity: 0;
+    top: 200px;
+}
+
+.productCardContainer:hover .contentBox a {
+    opacity: 1;
+    top: 0px;
+}

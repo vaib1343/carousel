@@ -1,0 +1,46 @@
+.imageMoveCard {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #d41e31, #491f8f);
+    border-radius: 20px;
+    position: relative;
+}
+
+.imageMoveCard img {
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.imageMoveCard:hover img {
+    height: 450px;
+    left: 80%;
+}
+
+.imageMoveCard .content {
+    position: relative;
+    left: 15%;
+    color: white;
+    width: 30%;
+    opacity: 0;
+    transition: all .3s;
+}
+
+
+
+.imageMoveCard .content p {
+    font-size: 14px;
+    color: white;
+}
+
+.imageMoveCard:hover .content {
+    opacity: 1;
+    transition-delay: .2s;
+    left: 10%;
+}
+

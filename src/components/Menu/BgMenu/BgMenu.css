@@ -1,0 +1,81 @@
+.bgMenuContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bgMenuContainer ul {
+    min-height: 100%;
+    min-width: 100%;
+    position: relative;
+}
+
+.bgMenuContainer ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.bgMenuContainer ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 3em;
+    padding: 5px 20px;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.bgMenuContainer ul:hover li a {
+    color: rgba(73, 73, 73, 0.133);
+}
+
+.bgMenuContainer ul li a:hover {
+    color: #000;
+    background-color: white;
+}
+
+.bgMenuContainer ul li a::before {
+    content: "Hover";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    z-index: -1;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 500px;
+    opacity: 0;
+    transition: letter-spacing 0.5s;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bgMenuContainer ul li a:hover:before {
+    content: attr(data-text);
+    opacity: 1;
+    letter-spacing: 10px;
+}
+
+.bgMenuContainer ul li:nth-child(1) a::before {
+    background-color: #81ecec;
+}
+.bgMenuContainer ul li:nth-child(2) a::before {
+    background-color: #ff7675;
+}
+.bgMenuContainer ul li:nth-child(3) a::before {
+    background-color: #55efc4;
+}
+.bgMenuContainer ul li:nth-child(4) a::before {
+    background-color: #a29bfe;
+}
+.bgMenuContainer ul li:nth-child(5) a::before {
+    background-color: #fd79a8;
+}

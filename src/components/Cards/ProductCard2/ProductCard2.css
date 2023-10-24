@@ -1,0 +1,133 @@
+.productCard2Container {
+    position: relative;
+    height: 420px;
+    width: 320px;
+    background-color: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.productCard2Container::before {
+    content: "";
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: #9bdc22;
+    top: -50%;
+    left: 40%;
+    transition: all 0.5s;
+}
+
+.productCard2Container:hover::before {
+    left: -10%;
+    top: -70%;
+}
+
+.productCard2Container .imgContainer {
+    max-width: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    left: -5%;
+    transition: all 0.5s;
+    margin: auto;
+}
+
+.productCard2Container .imgContainer img {
+    width: 100%;
+    transform: rotate(-30deg);
+}
+
+.productCard2Container:hover .imgContainer {
+    top: 10%;
+}
+
+.productCard2Container:hover .contentContainer {
+    top: 25%;
+}
+.productCard2Container .contentContainer {
+    position: relative;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    transition: all .5s;
+}
+
+.title {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.sizeContainer {
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(10px);
+}
+
+.sizeContainer p {
+    color: white;
+    font-size: 14px;
+}
+
+.sizeNumber {
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+    margin-inline: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 26px;
+    min-height: 26px;
+    transition: all 0.3s;
+}
+
+.sizeNumber:hover {
+    background-color: #9bdc22;
+}
+
+.productCard2Container:hover .contentContainer .sizeContainer {
+    opacity: 1;
+    transition-delay: 0.2s;
+    transform: translateY(0px);
+}
+
+.colorContainer {
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(10px);
+}
+.buyNow {
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s;
+    color: black;
+}
+
+.productCard2Container:hover .contentContainer .buyNow {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.4s;
+}

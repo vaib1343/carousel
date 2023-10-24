@@ -1,0 +1,40 @@
+.cursorMenuContainer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.cursorMenuContainer li {
+    list-style: none;
+    position: relative;
+}
+
+.cursorMenuContainer li a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1em;
+    font-size: 4rem;
+    color: transparent;
+    font-weight: 900;
+    -webkit-text-stroke: 1px black;
+}
+
+.cursorMenuContainer li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #00ade1;
+    border-right: 8px solid #00ade1;
+    -webkit-text-stroke: 1px #00ade1;
+    width: 0%;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.cursorMenuContainer li a:hover::before {
+    width: 100%;
+}

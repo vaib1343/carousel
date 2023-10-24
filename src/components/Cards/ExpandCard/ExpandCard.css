@@ -1,0 +1,46 @@
+.expandCardContainer {
+    width: 300px;
+    height: 260px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: rgba(50, 50, 50);
+    transition: all .3s ease-in-out;
+}
+
+.expandCardContainer .imgContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform: translateY(-60px);
+}
+
+.expandCardContainer .imgContainer img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.expandCardContainer:hover {
+    height: 420px;
+}
+
+.expandCardContainer .content {
+    text-align: center;
+    padding: 10px 20px;
+    transform: translateY(-500px);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.expandCardContainer:hover .content {
+    transform: translateY(-200px);
+    opacity: 1;
+}
+
+
+
+
+
+

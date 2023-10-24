@@ -56,6 +56,20 @@ import TwoBorderMenu from "./Menu/TwoBorderMenu/TwoBorderMenu";
 import FourBorder from "./Menu/FourBorder/FourBorder";
 import RotateBorderMenu from "./Menu/RotateBorderMenu/RotateBorderMenu";
 import Text3Dmenu from "./Menu/3DTextMenu/3DTextmenu";
+import BgMenu from "./Menu/BgMenu/BgMenu";
+import CursorMenu from "./Menu/CursorMenu/CursorMenu";
+import GlowMenu from "./Menu/GlowMenu/GlowMenu";
+import BottomBorderCard from "./Cards/BottomBorderCard/BottomBorderCard";
+import ExpandCard from "./Cards/ExpandCard/ExpandCard";
+import ImageMove from "./Cards/ImageMove/ImageMove";
+import HoverCard from "./Cards/HoverCard/HoverCard";
+import TwoPartCard from "./Cards/TwoPartCard/TwoPartCard";
+import PhotoCard from "./Cards/PhotoCard/PhotoCard";
+import BottomImage from "./Cards/BottomImage/BottomImage";
+import ProductCard from "./Cards/ProductCard/ProductCard";
+import ProductCard2 from "./Cards/ProductCard2/ProductCard2";
+import SmokieText from "./Text/SmokieText/SmokieText";
+import SwipeText from "./Text/SwipeText/SwipeText";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
@@ -179,7 +193,23 @@ function App() {
                 {/* <TwoBorderMenu/> */}
                 {/* <FourBorder/> */}
                 {/* <RotateBorderMenu/> */}
-                <Text3Dmenu/>
+                {/* <Text3Dmenu/> */}
+                {/* <BgMenu/> */}
+                {/* <CursorMenu /> */}
+                {/* <GlowMenu/> */}
+
+                {/* card */}
+                {/* <BottomBorderCard/> */}
+                {/* <ExpandCard/> */}
+                {/* <ImageMove/> */}
+                {/* <HoverCard/> */}
+                {/* <TwoPartCard/> */}
+                {/* <PhotoCard/> */}
+                {/* <BottomImage/> */}
+                {/* <ProductCard/> */}
+                {/* <ProductCard2/> */}
+                {/* <SmokieText/> */}
+                <SwipeText/>
             </div>
             {/* <ScrollAnimation/> */}
             <Battery />

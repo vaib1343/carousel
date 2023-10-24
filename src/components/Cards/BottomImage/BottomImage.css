@@ -1,0 +1,48 @@
+.bottomImageContainer {
+    height: 350px;
+    width: 250px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.bottomImageContainer img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.bottomImageContainer .content {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    transform: translateY(85%) translateX(-50%);
+    background-color: white;
+    transition: all .3s;
+}
+
+.bottomImageContainer:hover .content {
+    width: 100%;
+    transform: translateY(0) translateX(0);
+    left: 0;
+}
+
+
+.bottomImageContainer .content p, a {
+    opacity: 0;
+    transition: all .3s;
+}
+
+.bottomImageContainer:hover .content p, a{
+    opacity: 1;
+    transition-delay: .3s;
+}

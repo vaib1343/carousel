@@ -1,0 +1,48 @@
+.twoPartCard {
+    position: relative;
+    width: 300px;
+    cursor: pointer;
+}
+
+.twoPartCard .face1 {
+    background-color: rgb(69, 69, 69);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    gap: 10px;
+    transform: translateY(100px);
+    position: relative;
+    z-index: 1;
+    transition: all .3s;
+}
+
+.twoPartCard .face1 h2 {
+    font-size: 16px;
+}
+
+.twoPartCard .face2 {
+    background-color: white;
+    box-shadow: 0px 5px 10px rgb(69, 69, 69, 0.1);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+    transform: translateY(-100px);
+    transition: all .3s;
+}
+
+.twoPartCard:hover .face1 {
+    transform: translateY(0);
+    background-color: palevioletred;
+}
+
+.twoPartCard:hover .face2 {
+    transform: translateY(0);
+}
