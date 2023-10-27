@@ -1,0 +1,40 @@
+.blurText {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.blurText img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(10px);
+    transform: scale(1.4);
+    transition: all .5s;
+}
+
+.blurText p {
+    position: absolute;
+    color: white;
+    font-size: 10em;
+    font-weight: 800;
+    z-index: 2;
+    text-transform: uppercase;
+    transition: all .5s;
+
+}
+
+.blurText p:hover {
+    filter: blur(10px);
+}
+
+.blurText p:hover + img {
+   transform: scale(1);
+    filter: blur(0);
+}

@@ -70,6 +70,10 @@ import ProductCard from "./Cards/ProductCard/ProductCard";
 import ProductCard2 from "./Cards/ProductCard2/ProductCard2";
 import SmokieText from "./Text/SmokieText/SmokieText";
 import SwipeText from "./Text/SwipeText/SwipeText";
+import MenuIcon from "./MenuIcon/MenuIcon";
+import TwoBorder from "./TwoBorder/TwoBorder";
+import CloseText from "./Text/CloseText/CloseText";
+import BlurText from "./Text/BlurText/BlurText";
 
 const SLIDES = [ImageOne, ImageTwo, ImageThree, ImageFour, ImageFive];
 
@@ -208,8 +212,14 @@ function App() {
                 {/* <BottomImage/> */}
                 {/* <ProductCard/> */}
                 {/* <ProductCard2/> */}
+
+                {/* extra */}
                 {/* <SmokieText/> */}
-                <SwipeText/>
+                {/* <SwipeText/> */}
+                {/* <MenuIcon/> */}
+                {/* <TwoBorder/> */}
+                {/* <CloseText /> */}
+                <BlurText/>
             </div>
             {/* <ScrollAnimation/> */}
             <Battery />

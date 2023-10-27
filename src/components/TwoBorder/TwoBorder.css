@@ -1,0 +1,99 @@
+.twoBorderContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.twoBorderContainer h1 {
+    padding: 0;
+    margin: 0;
+    color: rgb(78, 78, 78);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.twoBorderContainer .borderTxt {
+    color: #58c747;
+    font-size: 30px;
+}
+
+.twoBorderContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #58c747;
+    border-bottom: 2px solid #58c747;
+    transform-origin: center top;
+    transform: scaleX(0);
+    transition: all 0.5s;
+}
+
+.twoBorderContainer:hover::before {
+    transform: scaleX(1);
+}
+
+.twoBorderContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #58c747;
+    border-right: 2px solid #58c747;
+    transform-origin: center;
+    transform: scaleY(0);
+    transition: all 0.5s;
+}
+
+.twoBorderContainer:hover::after {
+    transition-delay: 0.5s;
+    transform: scaleY(1);
+}
+
+.twoBorderContainer .rotated::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #58c747;
+    border-bottom: 2px solid #58c747;
+    transform-origin: center;
+    transform: rotate(45deg) scaleX(0);
+    transition: all 0.5s;
+}
+
+.twoBorderContainer:hover .rotated::after {
+    transform: rotate(45deg) scaleX(1);
+    transition-delay: 1s;
+}
+
+.twoBorderContainer .rotated::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #58c747;
+    border-right: 2px solid #58c747;
+    transform-origin: center;
+    transform: scaleY(0) rotate(45deg);
+    transition: all 0.5s;
+}
+
+.twoBorderContainer:hover .rotated::before {
+    transform: scaleY(1) rotate(45deg);
+    transition-delay: 1.5s;
+}

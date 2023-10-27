@@ -1,0 +1,60 @@
+.menuIconContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.menuIconContainer a {
+    height: 80px;
+    width: 80px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #10ac84;
+    position: relative;
+    overflow: hidden;
+}
+
+.menuicon {
+    transition: all 0.3s;
+    font-size: 20px;
+}
+
+.menuIconContainer a:hover .menuicon {
+    color: #f1f1f1;
+    transform: scale(1.3);
+}
+
+.menuIconContainer a::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background-color: #10ac84;
+    left: -110%;
+    top: 90%;
+    transform: rotate(45deg);
+}
+
+.menuIconContainer a:hover::before {
+    animation: bgAnimate 0.7s 1 forwards;
+}
+
+@keyframes bgAnimate {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+
+    50% {
+        left: 15%;
+        top: -30%;
+    }
+
+    100% {
+        left: -10%;
+        top: -10%;
+    }
+}
